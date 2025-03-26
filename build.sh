@@ -10,7 +10,7 @@ TARGET_DEFCONFIG=${1:-kalama_gki_defconfig}
 
 cd "$(dirname "$0")"
 
-LOCALVERSION=-android13-8-Kokuban-Hutao
+LOCALVERSION=-android13-8-Kokuban-Hutao-BYA5
 
 ARGS="
 CC=clang
