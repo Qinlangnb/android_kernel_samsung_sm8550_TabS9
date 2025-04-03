@@ -1,4 +1,4 @@
-export PATH="/home/kokuban/toolchain/prebuilts/clang/host/linux-x86/clang-r450784e/bin:usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:$PATH"
+export PATH="/home/kokuban/PlentyofToolchain/toolchainS23/prebuilts/clang/host/linux-x86/clang-r450784e/bin:usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:$PATH"
 
 echo $PATH
 
