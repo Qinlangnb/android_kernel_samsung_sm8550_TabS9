@@ -1,4 +1,10 @@
-export PATH="/home/kokuban/PlentyofToolchain/toolchainS23/prebuilts/clang/host/linux-x86/clang-r450784e/bin:usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:$PATH"
+#!/bin/bash
+TOOLCHAIN=$(realpath "/home/kokuban/PlentyofToolchain/toolchainS23/prebuilts")
+
+export PATH=$TOOLCHAIN/build-tools/linux-x86/bin:$PATH
+export PATH=$TOOLCHAIN/build-tools/path/linux-x86:$PATH
+export PATH=$TOOLCHAIN/clang/host/linux-x86/clang-r450784e/bin:$PATH
+export PATH=$TOOLCHAIN/clang-tools/linux-x86/bin:$PATH
 
 echo $PATH
 
@@ -10,7 +16,7 @@ TARGET_DEFCONFIG=${1:-kalama_gki_defconfig}
 
 cd "$(dirname "$0")"
 
-LOCALVERSION=-android13-Kokuban-Hutao-BYA5-LKM
+LOCALVERSION=-android13-Kokuban-Hutao-CYD9-LKM
 
 ARGS="
 CC=clang
