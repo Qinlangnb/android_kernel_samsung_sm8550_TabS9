@@ -3,10 +3,10 @@
 # 脚本出错时立即退出
 set -e
 
-# --- 用户配置 (TabS9) ---
+# --- 用户配置 ---
 
 # 1. 主配置文件
-# TabS9 内核的基础配置, 可被命令行第一个参数覆盖
+#  内核的基础配置, 可被命令行第一个参数覆盖
 MAIN_DEFCONFIG=kalama_gki_defconfig
 
 # 2. 内核版本标识
@@ -15,10 +15,10 @@ LOCALVERSION_BASE=-android13-Kokuban-Hutao-CYD9-SukiSUU
 
 # 3. LTO (Link Time Optimization)
 # 设置为 "full", "thin" 或 "" (留空以禁用)
-LTO="thin"
+LTO="full"
 
 # 4. 工具链路径
-# 指向你的 TabS9 工具链的 'prebuilts' 目录
+# 指向你的  工具链的 'prebuilts' 目录
 TOOLCHAIN=$(realpath "./toolchain/prebuilts")
 
 # 5. AnyKernel3 打包配置
@@ -33,14 +33,14 @@ ZIP_NAME_PREFIX="TabS9_kernel"
 # 切换到脚本所在目录 (内核源码根目录)
 cd "$(dirname "$0")"
 
-# --- 环境和路径设置 (TabS9) ---
-echo "--- 正在设置 TabS9 工具链环境 ---"
+# --- 环境和路径设置 ---
+echo "--- 正在设置  工具链环境 ---"
 export PATH=$TOOLCHAIN/build-tools/linux-x86/bin:$PATH
 export PATH=$TOOLCHAIN/build-tools/path/linux-x86:$PATH
 export PATH=$TOOLCHAIN/clang/host/linux-x86/clang-r450784e/bin:$PATH
 
 # =============================== 核心编译参数 ===============================
-# TabS9 通过 make 参数直接传递版本号
+#  通过 make 参数直接传递版本号
 MAKE_ARGS="
 O=out
 ARCH=arm64
