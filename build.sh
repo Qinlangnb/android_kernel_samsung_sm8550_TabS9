@@ -15,7 +15,7 @@ LOCALVERSION_BASE=-android13-Kokuban-Hutao-CYD9-SukiSUU
 
 # 3. LTO (Link Time Optimization)
 # 设置为 "full", "thin" 或 "" (留空以禁用)
-LTO=""
+LTO="thin"
 
 # 4. 工具链路径
 # 指向你的 TabS9 工具链的 'prebuilts' 目录
