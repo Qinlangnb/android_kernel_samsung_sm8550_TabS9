@@ -133,7 +133,7 @@ cd AnyKernel3
 # mv oImage zImage
 # 清理中间文件
 rm -f patch_linux
-echo "--- patch_linux 执行完毕, 已生成 zImage ---"
+# echo "--- patch_linux 执行完毕, 已生成 zImage ---"
 
 # 检查 lz4 命令是否存在
 if ! command -v lz4 &> /dev/null; then
